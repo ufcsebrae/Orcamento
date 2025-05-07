@@ -4,12 +4,6 @@ Este projeto é um sistema para gestão de orçamento que realiza consultas em u
 
 ---
 
-## Estrutura do Projeto
-
-### Diretórios e Arquivos
-
----
-
 ## Módulos e Funcionalidades
 
 ### 1. `main.py`
