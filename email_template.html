@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ assunto }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 14px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            display: block;
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .email-footer {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+        /* Estilo do cabeçalho */
+        h2 {
+            color: #007BFF;
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        table {
+            table-layout: auto;
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            word-break: break-word;
+            text-align: left;
+        }
+        th.index_name,
+        th.index {
+            text-align: left;
+        }
+        .table-section {
+            margin-bottom: 30px;
+        }
+        .table-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 12px;
+                padding: 10px;
+            }
+            .container {
+                padding: 10px;
+                border-radius: 0;
+            }
+            th, td {
+                padding: 6px;
+                font-size: 12px;
+            }
+            h2 {
+                font-size: 18px !important;
+            }
+            h3 {
+                font-size: 16px !important;
+            }
+            .table-title {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {{texto_email | safe}}
+        
+        <div class="table-section">
+            <div class="table-title">Despesas Mensais</div>
+            <div class="table-responsive">
+                {{ tabelas | safe }}
+            </div>
+        </div>
+        
+        <div class="table-section">
+            <div class="table-title">Receitas Mensais</div>
+            <div class="table-responsive">
+                {{ tabelasCC | safe }}
+            </div>
+        </div>
+        
+        <div class="table-section">
+            <div class="table-title">Superávit/Déficit Mensal</div>
+            <div class="table-responsive">
+                {{ tabelasID | safe }}
+            </div>
+        </div>
+    </div>
+    
+    <div class="email-footer">
+        ESSE E-MAIL FOI ENVIADO AUTOMATICAMENTE, POR FAVOR NÃO RESPONDA.
+    </div>
+</body>
+</html>
