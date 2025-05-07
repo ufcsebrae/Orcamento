@@ -89,16 +89,16 @@ Atualize os destinatários no arquivo main.py:
 destinatario = "orcamento@sp.sebrae.com.br;marcelocp@sebraesp.com.br"
 ```
 # Como Executar
-    1.Navegue até o diretório do projeto:
+1.Navegue até o diretório do projeto:
 ```bash
     cd "c:\Users\cesargl\OneDrive - SERVICO DE APOIO AS MICRO E PEQUENAS EMPRESAS DE SAO PAULO - SEBRAE\Área de Trabalho\Orcamento"
 ``` 
-    2.Execute o script principal:
+2.Execute o script principal:
 ```bash
     python main.py
 ```
 # Atualização do Projeto
-    1.Adicionar Novas Queries
+1.Adicionar Novas Queries
      - Adicione novas queries no arquivo connection/query.py no formato:
 ```bash
     queries["NOME_DA_QUERY"] = Query(
@@ -106,28 +106,28 @@ destinatario = "orcamento@sp.sebrae.com.br;marcelocp@sebraesp.com.br"
     sql="SELECT * FROM tabela WHERE ..."
 )
 ```
-    2. Atualizar o Template de E-mail
-     - Edite o arquivo templates/email_template.html para personalizar o corpo do e-mail.
+2. Atualizar o Template de E-mail
+- Edite o arquivo templates/email_template.html para personalizar o corpo do e-mail.
 
-    3. Adicionar Novas Funcionalidades
-     - Crie novos módulos ou funções conforme necessário.
-     - Certifique-se de atualizar os imports no main.py.
+3. Adicionar Novas Funcionalidades
+- Crie novos módulos ou funções conforme necessário.
+- Certifique-se de atualizar os imports no main.py.
 
 # Contribuição
-    1. Faça um fork do repositório.
-    2. Crie uma branch para sua feature:
+- 1. Faça um fork do repositório.
+- 2. Crie uma branch para sua feature:
 ```bash
 git checkout -b minha-feature
 ```
-    3. Faça commit das suas alterações:
+3. Faça commit das suas alterações:
 ```bash
 git commit -m "Adiciona nova funcionalidade"
 ```
-    4. Envie para o repositório remoto:
+4. Envie para o repositório remoto:
 ```bash
 git push origin minha-feature
 ```
-    5. Abra um Pull Request.
+5. Abra um Pull Request.
     
 # Licença
 Este projeto é privado e de uso exclusivo do SEBRAE-SP.
