@@ -88,6 +88,8 @@ Atualize os destinatários no arquivo main.py:
 ```bash
 destinatario = "orcamento@sp.sebrae.com.br;marcelocp@sebraesp.com.br"
 ```
+---
+
 # Como Executar
 1.Navegue até o diretório do projeto:
 ```bash
@@ -99,7 +101,7 @@ destinatario = "orcamento@sp.sebrae.com.br;marcelocp@sebraesp.com.br"
 ```
 # Atualização do Projeto
 1.Adicionar Novas Queries
-     - Adicione novas queries no arquivo connection/query.py no formato:
+- Adicione novas queries no arquivo connection/query.py no formato:
 ```bash
     queries["NOME_DA_QUERY"] = Query(
     titulo="Título da Query",
@@ -112,6 +114,8 @@ destinatario = "orcamento@sp.sebrae.com.br;marcelocp@sebraesp.com.br"
 3. Adicionar Novas Funcionalidades
 - Crie novos módulos ou funções conforme necessário.
 - Certifique-se de atualizar os imports no main.py.
+
+---
 
 # Contribuição
 - 1. Faça um fork do repositório.
@@ -128,7 +132,9 @@ git commit -m "Adiciona nova funcionalidade"
 git push origin minha-feature
 ```
 5. Abra um Pull Request.
-    
+
+---
+
 # Licença
 Este projeto é privado e de uso exclusivo do SEBRAE-SP.
 
