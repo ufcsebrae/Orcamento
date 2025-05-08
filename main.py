@@ -54,7 +54,7 @@ df2 = df_despesas
 df3 = df_receitas
 df4 = df_superavit_deficit
 
-destinatario = "orcamento@sp.sebrae.com.br;marcelocp@sebraesp.com.br"
+destinatario = "orcamento@sp.sebrae.com.br"
 assunto = f"Prévia Orçamento - {datetime.now().strftime('%d/%m/%Y')}"
 
 enviar_relatorio_email(destinatario, assunto, df2,df3,df4)
