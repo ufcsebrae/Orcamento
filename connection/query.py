@@ -91,13 +91,17 @@ ComTexto AS (
         FORMAT(DATEFROMPARTS(LEFT(cp.AnoMes,4), RIGHT(cp.AnoMes,2), 1), 'MMM', 'pt-br') AS MES_PT,
         CASE 
             WHEN cp.Valor IS NOT NULL THEN cp.Valor
-            WHEN cp.ValorAnterior IS NOT NULL AND FORMAT(cp.DataMes, 'yyyyMM') = FORMAT(DATEADD(MONTH, -1, GETDATE()), 'yyyyMM')
+            WHEN cp.Conta <> 'CONTRATO INTERNO' 
+                 AND cp.ValorAnterior IS NOT NULL 
+                 AND FORMAT(cp.DataMes, 'yyyyMM') = FORMAT(DATEADD(MONTH, -1, GETDATE()), 'yyyyMM')
                 THEN cp.ValorAnterior
             ELSE NULL
         END AS ValorNumerico,
         CASE 
             WHEN cp.Valor IS NOT NULL THEN FORMAT(cp.Valor, 'C', 'pt-br')
-            WHEN cp.ValorAnterior IS NOT NULL AND FORMAT(cp.DataMes, 'yyyyMM') = FORMAT(DATEADD(MONTH, -1, GETDATE()), 'yyyyMM')
+            WHEN cp.Conta <> 'CONTRATO INTERNO' 
+                 AND cp.ValorAnterior IS NOT NULL 
+                 AND FORMAT(cp.DataMes, 'yyyyMM') = FORMAT(DATEADD(MONTH, -1, GETDATE()), 'yyyyMM')
                 THEN FORMAT(cp.ValorAnterior, 'C', 'pt-br') + ' (P)'
             ELSE NULL
         END AS ValorFormatado
